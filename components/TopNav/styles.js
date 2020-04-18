@@ -1,7 +1,7 @@
 import styled, { css } from "@emotion/native";
 
 export const topNav = css`
-  padding: 60px 40px 20px 40px;
+  padding: 40px 20px 20px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

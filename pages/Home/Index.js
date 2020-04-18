@@ -10,7 +10,7 @@ export default function Home() {
       data={mock}
       renderItem={({ item, index }) => (
         <WeeklyCard
-          title={item.title}
+          data={item}
           index={index}
           isLast={index === mock.length - 1}
         />

@@ -3,5 +3,6 @@ export default {
   quickSilver: "#A2A5AB",
   hotPink: "#FF79AF",
   lavendarBlush: "#FEEAF2",
-  brilliantAzure: "#28A0FF"
+  brilliantAzure: "#28A0FF",
+  white: "#FFFFFF"
 };
