@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, FlatList, TouchableOpacity } from "react-native";
+import { Text, Image, View, FlatList, TouchableOpacity } from "react-native";
 import * as styles from "./styles";
 import colors from "../../config/colors";
 import { ternaryRender } from "../../lib";
@@ -14,9 +14,10 @@ export default function WeeklyCard(props) {
 
   /* Hooks */
   // TODO: remove this when we remove mock data
-  const [goals, updateGoals] = useState(data.goals);
+  const [goals, updateGoals] = useState(data.goals ? data.goals : []);
 
-  return (
+  return ternaryRender(
+    data.type === "DAY",
     <View style={styles.card(isLast)}>
       <Text style={styles.day}>{data.day}</Text>
       {goals.map((goal, index) => (
@@ -51,6 +52,18 @@ export default function WeeklyCard(props) {
           </View>
         </View>
       ))}
+    </View>,
+    <View style={styles.nudge}>
+      <Image style={styles.nudgeImage} source={{ uri: data.photo }} />
+      <View style={styles.nudgeContent}>
+        <View>
+          <Text style={styles.nudgeHeading}>{data.title}</Text>
+          <Text style={styles.nudgeDescription}>{data.description}</Text>
+        </View>
+        <View style={styles.nudgeButton}>
+          <Text style={styles.nudgeButtonText}>{data.ctaText}</Text>
+        </View>
+      </View>
     </View>
   );
 }
