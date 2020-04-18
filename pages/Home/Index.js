@@ -2,12 +2,11 @@ import React from "react";
 import { Text, View, FlatList } from "react-native";
 import * as styles from "./styles";
 import { mock } from "./mock";
-import WeeklyCard from "../WeeklyCard/Index";
+import WeeklyCard from "../../components/WeeklyCard/Index";
 
-export default function WeeklyList() {
+export default function Home() {
   return (
     <FlatList
-      style={styles.flatListContainer}
       data={mock}
       renderItem={({ item, index }) => (
         <WeeklyCard
@@ -17,6 +16,7 @@ export default function WeeklyList() {
         />
       )}
       keyExtractor={item => item.id}
+      style={styles.weeklyCardContainer}
     />
   );
 }

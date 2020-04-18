@@ -3,10 +3,6 @@ import { css } from "@emotion/native";
 export const bottomNav = css`
   border: solid 1px transparent;
   padding: 20px 40px 0px 40px;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +16,8 @@ export const bottomNavItem = css`
   align-items: center;
 `;
 
-export const bottomNavText = css`
+export const bottomNavText = color => css`
   font-size: 12px;
   padding: 5px 0px 0px 0px;
+  color: ${color};
 `;
