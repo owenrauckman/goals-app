@@ -4,5 +4,6 @@ export default {
   hotPink: "#FF79AF",
   lavendarBlush: "#FEEAF2",
   brilliantAzure: "#28A0FF",
+  cornFlowerBlue: "#E0EDFC",
   white: "#FFFFFF"
 };
