@@ -17,7 +17,6 @@ export default function ExploreCard(props) {
 
   /* Local Constants */
   const cardWidth = `${Dimensions.get("window").width / 2 - 20}px`;
-  // const imageWidth = `${Dimensions.get("window").width / 2 - 20}px`;
 
   return (
     <View style={styles.card(cardWidth, index % 2 === 0)}>
